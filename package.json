@@ -1,0 +1,18 @@
+{
+  "name": "intersecting-polygons-detector",
+  "version": "1.0.0",
+  "description": "For given polygon finds if any of segments intersect with each other",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vodek Kwasniak",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3"
+  }
+}
