@@ -12,7 +12,6 @@ function isPointPartOfSegment(point, segment1, segment2) {
 }
 
 function areLinesIntersect(segment1, segment2) {
-  // console.log('---------------\n',segment1,'\n',segment2, '\n----------------------\n')
   const A1 = segment1[1][1] - segment1[0][1]
   const B1 = segment1[0][0] - segment1[1][0]
   const C1 = A1 * segment1[0][0] + B1 * segment1[0][1]
@@ -47,46 +46,7 @@ function createSegments(polygon) {
   return arrOfSegments
 }
 
-function isPolygonIntersect(polygon) {
-  const segments = createSegments(polygon)
-
-  let lineIntersect = false
-
-  for (let i = 0; i < segments.length; i++) {
-    // console.log('Outer loop index', i)
-    for (let j = 0; j < segments.length; j++) {
-      // console.log('Inner loop index', j)
-      lineIntersect = areLinesIntersect(segments[i], segments[j + 1] || segments[j-1])
-      if (lineIntersect) {
-        break
-      }
-    }
-    if (lineIntersect) {
-      break
-    }
-  }
-  return lineIntersect
+module.exports = {
+  createSegments,
+  areLinesIntersect
 }
-
-const polygon1 = [
-  [1, 1],
-  [2, 3],
-  [1, -1],
-  [-1, -1],
-  [-1, 1],
-  [-1, 3],
-  [1, 1],
-]
-const polygon2 = [
-  [1, 1],
-  [1, -1],
-  [-1, 1],
-  [-1, -1],
-  [1, 1],
-]
-
-console.time('p')
-console.log(isPolygonIntersect(polygon1))
-console.log(isPolygonIntersect(polygon2))
-
-console.timeEnd('p')

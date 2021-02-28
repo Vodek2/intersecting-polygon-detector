@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vodek Kwasniak",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21"
   },
