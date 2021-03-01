@@ -1,5 +1,5 @@
 {
-  "name": "intersecting-polygons-detector",
+  "name": "intersecting-polygon-detector",
   "version": "1.0.0",
   "description": "For given polygon finds if any of segments intersect with each other",
   "main": "index.js",
