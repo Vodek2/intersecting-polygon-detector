@@ -2,7 +2,7 @@
   "name": "intersecting-polygon-detector",
   "version": "1.0.2",
   "description": "For given polygon finds if any of segments intersect with each other",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Vodek2/intersecting-polygon-detector"
