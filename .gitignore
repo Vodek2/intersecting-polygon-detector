@@ -1,1 +1,7 @@
+.eslintcache
+.vscode
+*.orig
+*.tgz
+coverage/
 node_modules
+

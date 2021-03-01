@@ -4,13 +4,11 @@
   "description": "For given polygon finds if any of segments intersect with each other",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "author": "Vodek Kwasniak",
   "license": "MIT",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3"
