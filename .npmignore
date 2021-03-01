@@ -1,4 +1,5 @@
 *.tgz
+assets
 coverage
 test
 .vscode
