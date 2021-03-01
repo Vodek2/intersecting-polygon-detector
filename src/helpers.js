@@ -26,53 +26,52 @@ function areLinesIntersect(segment1, segment2) {
   ]
 
   return isPointPartOfSegment(intersection, segment1, segment2)
-
-  // return isPart?intersection:isPart
-}
-function hasOnlyNumbers(arr){
-  return arr.every(el=> typeof el === 'number')
 }
 
-function isPolygonValid(polygon){
+function hasOnlyNumbers(arr) {
+  return arr.every((el) => typeof el === 'number')
+}
+
+function isPolygonValid(polygon) {
   //should be array
-  if(!Array.isArray(polygon)){
+  if (!Array.isArray(polygon)) {
     throw new Error('Polygon should be an array')
   }
   // should have length of minimum 4
-  if(polygon.length <4){
-    throw new Error('Polygon array length can\'t be less than 4')
+  if (polygon.length < 4) {
+    throw new Error("Polygon array length can't be less than 4")
   }
   // valid polygon has only arrays of two points x,y
-  if(!polygon.every(point=>point.length===2)){
+  if (!polygon.every((point) => point.length === 2)) {
     throw new Error('Polygon should has only points of 2 elements each')
   }
-  // each point should has 2 numbers 
-  const everyElementHas2numbers = polygon.every(el=>hasOnlyNumbers(el))
-  if(!everyElementHas2numbers){
+  // each point should has 2 numbers
+  const everyElementHas2numbers = polygon.every((el) => hasOnlyNumbers(el))
+  if (!everyElementHas2numbers) {
     throw new Error('Each point of polygon should have only numbers')
   }
   // last point should match first one
-  const equal = polygon[0][0] === polygon[polygon.length - 1][0] && polygon[0][1] === polygon[polygon.length - 1][1]
+  const equal =
+    polygon[0][0] === polygon[polygon.length - 1][0] &&
+    polygon[0][1] === polygon[polygon.length - 1][1]
   if (!equal) {
     throw new Error('Polygon start point and end point not matching')
   }
   return false
-
 }
 
 function createSegments(polygon) {
   const arrOfSegments = []
 
-  for (let i = 0; i < polygon.length-1; i++) {
+  for (let i = 0; i < polygon.length - 1; i++) {
     const segment = [polygon[i], polygon[i + 1]]
     arrOfSegments.push(segment)
   }
-  // arrOfSegments.push([polygon[polygon.length - 1], polygon[0]])
   return arrOfSegments
 }
 
 module.exports = {
   createSegments,
   areLinesIntersect,
-  isPolygonValid
+  isPolygonValid,
 }
