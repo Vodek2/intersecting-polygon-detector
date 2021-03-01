@@ -1,10 +1,9 @@
 # Intersection polygon detector
 
-This package validate 2D polygon array for self intersecting lines.
-Returns `true` if polygon has intersecting lines and `false` if does not.
-Does not have any dependencies.
-Use case example - coordinates array from goJSON object, validation before saving to DB.
-E.g. mongodb will fail on geoJSON query if polygon has self intersecting line.
+This package validate 2D polygon array for self intersecting lines.  
+Returns `true` if polygon has intersecting lines and `false` if does not.  
+Does not have any dependencies.  
+Use case example -> coordinates array from geoJSON object, validation before saving to DB e.g. mongodb will fail on geoJSON query if polygon has self intersecting line.
 
 ## Valid polygon example
 
