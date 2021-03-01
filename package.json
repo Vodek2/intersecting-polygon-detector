@@ -6,6 +6,14 @@
   "scripts": {
     "test": "jest --coverage"
   },
+  "keywords": [
+    "polygon",
+    "intersecting",
+    "self intersect",
+    "2D polygon",
+    "geoJSON",
+    "validator"
+  ],
   "author": "Vodek Kwasniak",
   "license": "MIT",
   "dependencies": {},
