@@ -3,3 +3,4 @@ assets
 coverage
 test
 .vscode
+jest.config.js
