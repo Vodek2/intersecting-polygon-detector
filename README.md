@@ -51,3 +51,26 @@ const   validPolygon = [
   isPolygonIntersecting(intersectingPolygon) // returns true
 
   ```
+
+#### practical use example
+
+```js
+import *  as isPolygonIntersecting from 'intersecting-polygon-detector';
+
+function saveUsersPolygon(polygon){
+  if(sPolygonIntersecting(polygon)){
+    throw new Error('Polygon is self intersecting!')
+  }
+
+  // carry on with saving to DB
+
+}
+
+```
+
+## additional behaviour
+
+* validates the polygon if it is an array
+* validates if array has minimum length of 4
+* validates if each point contains only 2 coordinates and thay are of type numbers
+* validates if the polygon is closing properly (start point equals end point)
