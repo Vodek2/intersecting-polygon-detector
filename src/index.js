@@ -1,6 +1,7 @@
 const {
   areLinesIntersect,
   createSegments,
+  getAllSegmentsButIndexAndNeighbors,
   isPolygonValid,
 } = require('./helpers')
 
@@ -11,8 +12,10 @@ function isPolygonIntersect(polygon) {
   let lineIntersect = false
 
   outer:for (let i = 0; i < segments.length; i++) {
-    for (let j = i + 1; j < segments.length; j++) {
-      lineIntersect = areLinesIntersect(segments[i], segments[j])
+    const current = segments[i]
+    const otherSegments = getAllSegmentsButIndexAndNeighbors(i, segments)
+    for (let j = 0; j < otherSegments.length; j++) {
+      lineIntersect = areLinesIntersect(current, otherSegments[j])
       if (lineIntersect) {
         break outer
       }

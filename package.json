@@ -1,6 +1,6 @@
 {
   "name": "intersecting-polygon-detector",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "typings": "index.d.ts",
   "description": "For given polygon finds if any of segments intersect with each other",
   "main": "src/index.js",
